@@ -45,6 +45,7 @@ public class MedicoService {
 			medicoUpdate.setPrimerApellido(medico.getPrimerApellido());
 			medicoUpdate.setSegundoApellido(medico.getSegundoApellido());
 			medicoUpdate.setFechaExpedicionDoc(medico.getFechaExpedicionDoc());
+			medicoRepository.save(medicoUpdate);
 			return "Medico registrado Exitosamente";
 			
 		}else {
