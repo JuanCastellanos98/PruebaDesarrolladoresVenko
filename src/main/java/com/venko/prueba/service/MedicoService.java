@@ -53,15 +53,12 @@ public class MedicoService {
 		}
 		
 	}
-	/*public Optional<Medico> findMedicoByCc(String cc) {
-		Medico medico=medicoRepository.findByNumeroDocumento(cc).get();
-		if(medico.isPresent()) {
-		return medicoRepository.findByNumeroDocumento(cc);
-		}else {
-			return "Medico no encontrado";
-		}
+	public Medico findMedicoByCc(String cc) {
+		Medico medico=medicoRepository.findByNumeroDocumento(cc);
+		return medico;
+	}
 		
-	}*/
+	
 	
 	public String DeleteMedicoByCc(String cc) {
 		Medico medico=medicoRepository.findByNumeroDocumento(cc);

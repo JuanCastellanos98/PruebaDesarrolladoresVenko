@@ -55,4 +55,15 @@ public class MedicoRest {
 		return medicoService.UpdateMedicoByCc(ccMedico, medico);
 	}
 	
+	//Mostrar la informacion del medico por cedula
+	@GetMapping("{cc}")
+	private ResponseEntity<?> findMedicobyCc(@PathVariable("cc") String ccMedico){
+		Medico medico = medicoService.findMedicoByCc(ccMedico);
+		if(medico==null) {
+			return ResponseEntity.badRequest().body("El Medico no existe");
+		}else {
+			return ResponseEntity.ok(medico);
+		}
+	}
+	
 }
