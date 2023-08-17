@@ -16,6 +16,7 @@ public class Medico {
 	private String segundoApellido;
 	private String tipoDocumento;
 	private LocalDate fechaExpedicionDoc;
+	private String contraseña;
 	
 	
 	
@@ -25,8 +26,9 @@ public class Medico {
 		super();
 	}
 
+	
 	public Medico(String numeroDocumento, String primerNombre, String segundoNombre, String primerApellido,
-			String segundoApellido, String tipoDocumento, LocalDate fechaExpedicionDoc) {
+			String segundoApellido, String tipoDocumento, LocalDate fechaExpedicionDoc, String contraseña) {
 		super();
 		this.numeroDocumento = numeroDocumento;
 		this.primerNombre = primerNombre;
@@ -35,6 +37,19 @@ public class Medico {
 		this.segundoApellido = segundoApellido;
 		this.tipoDocumento = tipoDocumento;
 		this.fechaExpedicionDoc = fechaExpedicionDoc;
+		this.contraseña = contraseña;
+	}
+
+
+
+
+
+	public String getContraseña() {
+		return contraseña;
+	}
+
+	public void setContraseña(String contraseña) {
+		this.contraseña = contraseña;
 	}
 
 	public String getNumeroDocumento() {
