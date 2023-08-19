@@ -9,6 +9,7 @@ import com.venko.prueba.model.Medico;
 
 public interface MedicoRepository extends JpaRepository<Medico,Long> {
 	Medico findByNumeroDocumento(String cc); 
+	Optional<Medico> findOneByNumeroDocumento(String cc); 
 
 	Medico findByNumeroDocumentoAndTipoDocumento(String cc, String TipoDoc);
 	
